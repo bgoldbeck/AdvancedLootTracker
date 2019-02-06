@@ -603,11 +603,12 @@ local function LootReceived ( eventCode, lootedBy, itemLink, quantity, itemSound
 					found = true
 				end
 			end
+					
+			if found == false then
+				return
+			end
 		end
-		
-		if found == false then
-			return
-		end
+
 		
 		local icon, sellPrice, meetsUsageRequirement, equipType, itemStyle = GetItemLinkInfo ( itemLink )
 		local traitType, traitDescription, traitSubtype, traitSubtypeName, traitSubtypeDescription = GetItemLinkTraitInfo ( itemLink )
