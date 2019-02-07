@@ -133,7 +133,7 @@ end
 
 local function SetupData ( rowControl, dataTable, lootTable )
 	rowControl:SetText ( dataTable.text )
-	rowControl:SetFont ( "ZoFontWinH4" )
+	rowControl:SetFont ( "ZoFontWinH5" )
 	
 	rowControl:SetHandler ( "OnMouseUp", function ( )
 		local x = ""
@@ -459,7 +459,7 @@ local function AddonSettings ( )
 				"Impenetrable",
 				"Infused",
 				"Nirnhoned",
-				"Prosperous",
+				"Invigorating",
 				"Reinforced",
 				"Sturdy",
 				"Training",
@@ -726,19 +726,19 @@ local function LootReceived ( eventCode, lootedBy, itemLink, quantity, itemSound
 				end
 				
 				if quantity == 1.0 then
-					z = zo_strformat ( "<<1>>You looted <<2>> <<3>> <<4>> <<5>>",
+					z = zo_strformat ( "<<1>>You <<2>> <<3>> <<4>> <<5>>",
 					x, temp_Icon, itemLink, y, item_total_count )
 				else
-					z = zo_strformat ( "<<1>>You looted <<2>> x <<3>> <<4>> <<5>> <<6>>",
+					z = zo_strformat ( "<<1>>You <<2>> x <<3>> <<4>> <<5>> <<6>>",
 					x, quantity, temp_Icon, itemLink, y, item_total_count )
 				end
 			else
 				if AdvancedLootTracker.Group then
 					if quantity == 1.0 then
-						z = zo_strformat ( "<<1>><<2>> looted <<3>> <<4>> <<5>> <<6>>",
+						z = zo_strformat ( "<<1>><<2>> <<3>> <<4>> <<5>> <<6>>",
 						x, ZO_LinkHandler_CreateLink ( zo_strformat ( SI_UNIT_NAME, lootedBy ), LINK_STYLE_BRACKETS, DISPLAY_NAME_LINK_TYPE, lootedBy ), temp_Icon, itemLink, y )
 					else
-						z = zo_strformat ( "<<1>><<2>> looted <<3>> x <<4>> <<5>> <<6>> <<7>>",
+						z = zo_strformat ( "<<1>><<2>> <<3>> x <<4>> <<5>> <<6>> <<7>>",
 						x, ZO_LinkHandler_CreateLink ( zo_strformat ( SI_UNIT_NAME, lootedBy ), LINK_STYLE_BRACKETS, DISPLAY_NAME_LINK_TYPE, lootedBy ), quantity, temp_Icon, itemLink, y )
 					end
 				end
