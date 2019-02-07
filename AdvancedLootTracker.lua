@@ -78,9 +78,11 @@ local function CreateWindow ( )
 	LootWindow:SetHandler ( "OnResizeStop", function ( )
 		-- AdvancedLootTracker.LootWindowWidth = LootWindow:GetWidth ( )
 		AdvancedLootTracker.savedVariables.LootWindowWidth = LootWindow:GetWidth ( )
+		AdvancedLootTracker.LootWindowWidth = LootWindow:GetWidth ( )
 		
 		-- AdvancedLootTracker.LootWindowHeight = LootWindow:GetHeight ( )
 		AdvancedLootTracker.savedVariables.LootWindowHeight = LootWindow:GetHeight ( )
+		AdvancedLootTracker.LootWindowHeight = LootWindow:GetHeight ( )
 		
 		LootWindow.Title:SetDimensions (( LootWindow:GetWidth ( ) - 30.0 ), 35.0 )
 		lootTable:SetDimensions (( LootWindow:GetWidth ( ) - 30.0 ), ( LootWindow:GetHeight ( ) - 60.0 ))
@@ -871,7 +873,7 @@ local function AddOnLoaded ( event, addonName )
 		AdvancedLootTracker.LootWindowX = AdvancedLootTracker.savedVariables.LootWindowX
 		AdvancedLootTracker.LootWindowY = AdvancedLootTracker.savedVariables.LootWindowY
 		AdvancedLootTracker.LootWindowWidth = AdvancedLootTracker.savedVariables.LootWindowWidth
-		AdvancedLootTracker.LootWindowWidth = AdvancedLootTracker.savedVariables.LootWindowWidth
+		AdvancedLootTracker.LootWindowHeight = AdvancedLootTracker.savedVariables.LootWindowHeight
 		
 		InitializeScrollList ( )
 		
