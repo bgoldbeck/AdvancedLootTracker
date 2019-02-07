@@ -836,7 +836,7 @@ local function AddOnLoaded ( event, addonName )
 			"Well-fitted",
 			"Training",
 			"Infused",
-			"Prosperous",
+			"Invigorating",
 			"Divines",
 			"Ornate",
 			"Intricate",
